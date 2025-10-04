@@ -1,0 +1,25 @@
+!doctype html
+html lang=pt-BR
+  head
+    meta charset=UTF-8 
+    link rel=icon type=imagesvg+xml href=vite.svg 
+    meta name=viewport content=width=device-width, initial-scale=1.0 
+    
+    !-- PWA Meta Tags --
+    meta name=theme-color content=#667eea 
+    meta name=description content=Sistema de agendamento de músicos para igrejas adventistas 
+    link rel=apple-touch-icon href=apple-touch-icon.png 
+    link rel=manifest href=manifest.json 
+    
+    !-- Open Graph  Facebook --
+    meta property=ogtype content=website 
+    meta property=ogtitle content=Louvor Conectado 
+    meta property=ogdescription content=Sistema de agendamento de músicos para igrejas 
+    
+    titleLouvor Conectadotitle
+  head
+  body
+    div id=rootdiv
+    script type=module src=srcmain.jsxscript
+  body
+html
