@@ -6,24 +6,24 @@ import Layout from "../Layout.jsx";
 import SelecaoPerfil from "../Pages/SelecaoPerfil.jsx";
 
 // Páginas - Músico
-import DashboardMusico from "../Pages/DashboardMusico";
-import AgendaMusico from "../Pages/AgendaMusico";
-import PerfilMusico from "../Pages/PerfilMusico";
-import CadastroMusico from "../Pages/CadastroMusico";
-import AguardandoAprovacao from "../Pages/AguardandoAprovacao";
+import DashboardMusico from "../Pages/DashboardMusico.jsx";
+import AgendaMusico from "../Pages/AgendaMusico.jsx";
+import PerfilMusico from "../Pages/PerfilMusico.jsx";
+import CadastroMusico from "../Pages/CadastroMusico.jsx";
+import AguardandoAprovacao from "../Pages/AguardandoAprovacao.jsx";
 
 // Páginas - Diretor
-import DashboardDiretor from "../Pages/DashboardDiretor";
-import BuscarMusicos from "../Pages/BuscarMusicos";
-import PerfilMusicoView from "../Pages/PerfilMusicoView";
-import AprovarMusicos from "../Pages/AprovarMusicos";
-import MinhaIgreja from "../Pages/MinhaIgreja";
-import PerfilDiretor from "../Pages/PerfilDiretor";
+import DashboardDiretor from "../Pages/DashboardDiretor.jsx";
+import BuscarMusicos from "../Pages/BuscarMusicos.jsx";
+import PerfilMusicoView from "../Pages/PerfilMusicoView.jsx";
+import AprovarMusicos from "../Pages/AprovarMusicos.jsx";
+import MinhaIgreja from "../Pages/MinhaIgreja.jsx";
+import PerfilDiretor from "../Pages/PerfilDiretor.jsx";
 
 // Páginas - Compartilhadas
-import VotacaoDiretor from "../Pages/VotacaoDiretor";
-import HistoricoEventos from "../Pages/HistoricoEventos";
-import Estatisticas from "../Pages/Estatisticas";
+import VotacaoDiretor from "../Pages/VotacaoDiretor.jsx";
+import HistoricoEventos from "../Pages/HistoricoEventos.jsx";
+import Estatisticas from "../Pages/Estatisticas.jsx";
 
 function App() {
   return (
