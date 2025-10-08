@@ -1,29 +1,29 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "../Layout";
 
 // Páginas - Comum
-import SelecaoPerfil from "./pages/SelecaoPerfil";
+import SelecaoPerfil from "../Pages/SelecaoPerfil";
 
 // Páginas - Músico
-import DashboardMusico from "./pages/DashboardMusico";
-import AgendaMusico from "./pages/AgendaMusico";
-import PerfilMusico from "./pages/PerfilMusico";
-import CadastroMusico from "./pages/CadastroMusico";
-import AguardandoAprovacao from "./pages/AguardandoAprovacao";
+import DashboardMusico from "../Pages/DashboardMusico";
+import AgendaMusico from "../Pages/AgendaMusico";
+import PerfilMusico from "../Pages/PerfilMusico";
+import CadastroMusico from "../Pages/CadastroMusico";
+import AguardandoAprovacao from "../Pages/AguardandoAprovacao";
 
 // Páginas - Diretor
-import DashboardDiretor from "./pages/DashboardDiretor";
-import BuscarMusicos from "./pages/BuscarMusicos";
-import PerfilMusicoView from "./pages/PerfilMusicoView";
-import AprovarMusicos from "./pages/AprovarMusicos";
-import MinhaIgreja from "./pages/MinhaIgreja";
-import PerfilDiretor from "./pages/PerfilDiretor";
+import DashboardDiretor from "../Pages/DashboardDiretor";
+import BuscarMusicos from "../Pages/BuscarMusicos";
+import PerfilMusicoView from "../Pages/PerfilMusicoView";
+import AprovarMusicos from "../Pages/AprovarMusicos";
+import MinhaIgreja from "../Pages/MinhaIgreja";
+import PerfilDiretor from "../Pages/PerfilDiretor";
 
 // Páginas - Compartilhadas
-import VotacaoDiretor from "./pages/VotacaoDiretor";
-import HistoricoEventos from "./pages/HistoricoEventos";
-import Estatisticas from "./pages/Estatisticas";
+import VotacaoDiretor from "../Pages/VotacaoDiretor";
+import HistoricoEventos from "../Pages/HistoricoEventos";
+import Estatisticas from "../Pages/Estatisticas";
 
 function App() {
   return (
