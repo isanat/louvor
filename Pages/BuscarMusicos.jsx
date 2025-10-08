@@ -7,7 +7,7 @@ import { Calendar } from "@/Components/ui/calendar";
 import { Button } from "@/Components/ui/button";
 import { ArrowLeft, Search } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils/index";
+import { createPageUrl } from "../utils/index.js";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 

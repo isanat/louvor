@@ -4,7 +4,7 @@ import { Event } from "@/Entities/Event";
 import { Church } from "@/Entities/Church";
 import { Button } from "@/Components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils/index";
+import { createPageUrl } from "../utils/index.js";
 import { Plus, Calendar, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
 import EventCard from "../Components/diretor/EventCard";

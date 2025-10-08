@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { User } from "@/Entities/User";
-import { createPageUrl } from "@/utils/index";
+import { createPageUrl } from "../utils/index.js";
 import { Music, UserCircle } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 
