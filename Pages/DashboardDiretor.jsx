@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { User } from "@/entities/User";
 import { Event } from "@/entities/Event";
 import { Church } from "@/entities/Church";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Plus, Calendar, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
-import EventCard from "../components/diretor/EventCard";
-import StatsCard from "../components/diretor/StatsCard";
+import EventCard from "../Components/diretor/EventCard";
+import StatsCard from "../Components/diretor/StatsCard";
 
 export default function DashboardDiretor() {
   const navigate = useNavigate();

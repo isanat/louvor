@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Music, MapPin, Star, Calendar, User } from "lucide-react";
 
 export default function MusicianCard({ musician, selectedDate }) {

@@ -3,16 +3,16 @@ import { User } from "@/entities/User";
 import { Event } from "@/entities/Event";
 import { MusicianProfile } from "@/entities/MusicianProfile";
 import { Church } from "@/entities/Church";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
+import { Calendar } from "@/Components/ui/calendar";
+import { Button } from "@/Components/ui/button";
 import { ArrowLeft, Search } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
-import MusicianCard from "../components/diretor/MusicianCard";
-import FilterButtons from "../components/diretor/FilterButtons";
+import MusicianCard from "../Components/diretor/MusicianCard";
+import FilterButtons from "../Components/diretor/FilterButtons";
 
 export default function BuscarMusicos() {
   const navigate = useNavigate();

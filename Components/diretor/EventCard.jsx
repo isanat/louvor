@@ -1,7 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Calendar, Clock, MapPin, User } from "lucide-react";
 
 export default function EventCard({ event, church, onUpdate }) {

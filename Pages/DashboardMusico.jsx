@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { User } from "@/entities/User";
 import { Event } from "@/entities/Event";
 import { Church } from "@/entities/Church";
-import { Calendar } from "@/components/ui/calendar";
+import { Calendar } from "@/Components/ui/calendar";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { MapPin, Clock, User as UserIcon } from "lucide-react";
