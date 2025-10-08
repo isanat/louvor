@@ -1,87 +1,62 @@
-{
-  "name": "Event",
-  "type": "object",
-  "properties": {
-    "churchId": {
-      "type": "string",
-      "description": "ID da igreja"
-    },
-    "musicianId": {
-      "type": "string",
-      "description": "ID do músico convidado"
-    },
-    "musicianName": {
-      "type": "string",
-      "description": "Nome do músico (cache)"
-    },
-    "musicianEmail": {
-      "type": "string",
-      "description": "Email do músico (cache)"
-    },
-    "musicianPhone": {
-      "type": "string",
-      "description": "Telefone do músico (cache)"
-    },
-    "musicianWhatsapp": {
-      "type": "string",
-      "description": "WhatsApp do músico (cache)"
-    },
-    "directorId": {
-      "type": "string",
-      "description": "ID do diretor que convidou"
-    },
-    "directorName": {
-      "type": "string",
-      "description": "Nome do diretor (cache)"
-    },
-    "directorEmail": {
-      "type": "string",
-      "description": "Email do diretor (cache)"
-    },
-    "eventDate": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Data e hora do evento"
-    },
-    "eventType": {
-      "type": "string",
-      "enum": [
-        "Culto Matinal",
-        "Culto Vespertino",
-        "Culto de Oração",
-        "Evento Especial"
-      ],
-      "description": "Tipo de evento"
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "pendente",
-        "confirmado",
-        "recusado",
-        "concluido",
-        "cancelado_pelo_musico"
-      ],
-      "default": "pendente",
-      "description": "Status do convite"
-    },
-    "directorNotes": {
-      "type": "string",
-      "description": "Observações do diretor"
-    },
-    "musicianNotes": {
-      "type": "string",
-      "description": "Resposta do músico"
-    },
-    "cancellationReason": {
-      "type": "string",
-      "description": "Motivo do cancelamento pelo músico"
-    }
-  },
-  "required": [
-    "churchId",
-    "musicianId",
-    "directorId",
-    "eventDate"
-  ]
+// Entidade Church para gerenciamento de igrejas
+export class Church {
+  static async list() {
+    // Simulação - substitua pela sua implementação real
+    return [
+      {
+        id: "church-1",
+        name: "Igreja Central",
+        address: "Rua das Flores, 123",
+        city: "São Paulo",
+        state: "SP",
+        directorId: "user-2",
+        phone: "(11) 3333-3333",
+        pastorName: "Pastor João",
+        district: "Distrito Central"
+      },
+      {
+        id: "church-2",
+        name: "Igreja do Norte",
+        address: "Av. Norte, 456",
+        city: "São Paulo",
+        state: "SP",
+        directorId: "user-3",
+        phone: "(11) 4444-4444",
+        pastorName: "Pastora Maria",
+        district: "Distrito Norte"
+      }
+    ];
+  }
+
+  static async filter(filters) {
+    // Simulação - substitua pela sua implementação real
+    const churches = await this.list();
+    
+    return churches.filter(church => {
+      if (filters.directorId && church.directorId !== filters.directorId) return false;
+      if (filters.city && church.city !== filters.city) return false;
+      if (filters.state && church.state !== filters.state) return false;
+      return true;
+    });
+  }
+
+  static async create(churchData) {
+    // Simulação - substitua pela sua implementação real
+    console.log("Criando igreja:", churchData);
+    return { id: "new-church", ...churchData };
+  }
+
+  static async update(id, churchData) {
+    // Simulação - substitua pela sua implementação real
+    console.log("Atualizando igreja:", id, churchData);
+    return { id, ...churchData };
+  }
+
+  static async delete(id) {
+    // Simulação - substitua pela sua implementação real
+    console.log("Deletando igreja:", id);
+    return { success: true };
+  }
 }
+
+export { Church };
