@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { User } from "@/entities/User";
-import { Event } from "@/entities/Event";
-import { Church } from "@/entities/Church";
+import { User } from "@/Entities/User";
+import { Event } from "@/Entities/Event";
+import { Church } from "@/Entities/Church";
 import { Button } from "@/Components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageUrl } from "@/utils/index";
 import { Plus, Calendar, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
 import EventCard from "../Components/diretor/EventCard";

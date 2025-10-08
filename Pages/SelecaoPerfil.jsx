@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { User } from "@/entities/User";
-import { createPageUrl } from "@/utils";
+import { User } from "@/Entities/User";
+import { createPageUrl } from "@/utils/index";
 import { Music, UserCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 
 export default function SelecaoPerfil() {
   const navigate = useNavigate();

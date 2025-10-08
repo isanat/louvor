@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { User } from "@/entities/User";
-import { Event } from "@/entities/Event";
-import { Church } from "@/entities/Church";
+import { User } from "@/Entities/User";
+import { Event } from "@/Entities/Event";
+import { Church } from "@/Entities/Church";
 import { Calendar } from "@/Components/ui/calendar";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";

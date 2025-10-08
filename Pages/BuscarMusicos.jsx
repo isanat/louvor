@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { User } from "@/entities/User";
-import { Event } from "@/entities/Event";
-import { MusicianProfile } from "@/entities/MusicianProfile";
-import { Church } from "@/entities/Church";
+import { User } from "@/Entities/User";
+import { Event } from "@/Entities/Event";
+import { MusicianProfile } from "@/Entities/MusicianProfile";
+import { Church } from "@/Entities/Church";
 import { Calendar } from "@/Components/ui/calendar";
 import { Button } from "@/Components/ui/button";
 import { ArrowLeft, Search } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageUrl } from "@/utils/index";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
