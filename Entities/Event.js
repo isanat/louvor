@@ -48,5 +48,3 @@ export class Event {
     return { success: true };
   }
 }
-
-export { Event };

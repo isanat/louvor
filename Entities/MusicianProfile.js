@@ -50,5 +50,3 @@ export class MusicianProfile {
     return { success: true };
   }
 }
-
-export { MusicianProfile };

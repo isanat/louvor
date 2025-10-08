@@ -44,5 +44,3 @@ export class DirectorVote {
     return { success: true };
   }
 }
-
-export { DirectorVote };

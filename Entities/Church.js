@@ -58,5 +58,3 @@ export class Church {
     return { success: true };
   }
 }
-
-export { Church };
