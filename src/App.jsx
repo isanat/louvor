@@ -1,62 +1,41 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Layout from "../Layout.jsx";
 
-// Páginas - Comum
-import SelecaoPerfil from "../Pages/SelecaoPerfil.jsx";
-
-// Páginas - Músico
-import DashboardMusico from "../Pages/DashboardMusico.jsx";
-import AgendaMusico from "../Pages/AgendaMusico.jsx";
-import PerfilMusico from "../Pages/PerfilMusico.jsx";
-import CadastroMusico from "../Pages/CadastroMusico.jsx";
-import AguardandoAprovacao from "../Pages/AguardandoAprovacao.jsx";
-
-// Páginas - Diretor
-import DashboardDiretor from "../Pages/DashboardDiretor.jsx";
-import BuscarMusicos from "../Pages/BuscarMusicos.jsx";
-import PerfilMusicoView from "../Pages/PerfilMusicoView.jsx";
-import AprovarMusicos from "../Pages/AprovarMusicos.jsx";
-import MinhaIgreja from "../Pages/MinhaIgreja.jsx";
-import PerfilDiretor from "../Pages/PerfilDiretor.jsx";
-
-// Páginas - Compartilhadas
-import VotacaoDiretor from "../Pages/VotacaoDiretor.jsx";
-import HistoricoEventos from "../Pages/HistoricoEventos.jsx";
-import Estatisticas from "../Pages/Estatisticas.jsx";
+// Componente simples para testar
+function TestPage({ title, description }) {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8 text-center">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
+        <p className="text-gray-600 mb-6">{description}</p>
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+          ✅ Página funcionando!
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Rota inicial */}
-        <Route path="/" element={<Navigate to="/selecao-perfil" replace />} />
+        <Route path="/" element={<Navigate to="/teste" replace />} />
         
-        {/* Seleção de perfil */}
-        <Route path="/selecao-perfil" element={<Layout><SelecaoPerfil /></Layout>} />
+        {/* Página de teste */}
+        <Route 
+          path="/teste" 
+          element={
+            <TestPage 
+              title="Louvor Conectado" 
+              description="Sistema funcionando corretamente!" 
+            />
+          } 
+        />
         
-        {/* Rotas do Músico */}
-        <Route path="/musico/dashboard" element={<Layout><DashboardMusico /></Layout>} />
-        <Route path="/musico/agenda" element={<Layout><AgendaMusico /></Layout>} />
-        <Route path="/musico/perfil" element={<Layout><PerfilMusico /></Layout>} />
-        <Route path="/musico/cadastro" element={<Layout><CadastroMusico /></Layout>} />
-        <Route path="/musico/aguardando" element={<Layout><AguardandoAprovacao /></Layout>} />
-        
-        {/* Rotas do Diretor */}
-        <Route path="/diretor/dashboard" element={<Layout><DashboardDiretor /></Layout>} />
-        <Route path="/diretor/buscar" element={<Layout><BuscarMusicos /></Layout>} />
-        <Route path="/diretor/perfil-musico" element={<Layout><PerfilMusicoView /></Layout>} />
-        <Route path="/diretor/aprovar" element={<Layout><AprovarMusicos /></Layout>} />
-        <Route path="/diretor/igreja" element={<Layout><MinhaIgreja /></Layout>} />
-        <Route path="/diretor/perfil" element={<Layout><PerfilDiretor /></Layout>} />
-        
-        {/* Rotas compartilhadas */}
-        <Route path="/votacao" element={<Layout><VotacaoDiretor /></Layout>} />
-        <Route path="/historico" element={<Layout><HistoricoEventos /></Layout>} />
-        <Route path="/estatisticas" element={<Layout><Estatisticas /></Layout>} />
-        
-        {/* 404 */}
-        <Route path="*" element={<Navigate to="/selecao-perfil" replace />} />
+        {/* Fallback */}
+        <Route path="*" element={<Navigate to="/teste" replace />} />
       </Routes>
     </BrowserRouter>
   );
