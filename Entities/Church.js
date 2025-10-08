@@ -5,25 +5,29 @@ export class Church {
     return [
       {
         id: "church-1",
-        name: "Igreja Central",
-        address: "Rua das Flores, 123",
+        name: "Igreja Central de São Paulo",
+        address: "Rua das Flores, 123 - Centro, São Paulo - SP",
         city: "São Paulo",
         state: "SP",
         directorId: "user-2",
         phone: "(11) 3333-3333",
-        pastorName: "Pastor João",
-        district: "Distrito Central"
+        whatsappNumber: "5511999888777",
+        pastorName: "Pastor João Batista",
+        district: "Distrito Paulistano Leste",
+        imageUrl: null
       },
       {
         id: "church-2",
         name: "Igreja do Norte",
-        address: "Av. Norte, 456",
+        address: "Av. Paulista, 456 - Bela Vista, São Paulo - SP",
         city: "São Paulo",
         state: "SP",
-        directorId: "user-3",
+        directorId: null, // Sem diretor atual
         phone: "(11) 4444-4444",
-        pastorName: "Pastora Maria",
-        district: "Distrito Norte"
+        whatsappNumber: "5511888777666",
+        pastorName: "Pastora Maria Silva",
+        district: "Distrito Paulistano Norte",
+        imageUrl: null
       }
     ];
   }
@@ -38,6 +42,12 @@ export class Church {
       if (filters.state && church.state !== filters.state) return false;
       return true;
     });
+  }
+
+  static async getById(id) {
+    // Simulação - substitua pela sua implementação real
+    const churches = await this.list();
+    return churches.find(church => church.id === id) || null;
   }
 
   static async create(churchData) {
@@ -56,5 +66,29 @@ export class Church {
     // Simulação - substitua pela sua implementação real
     console.log("Deletando igreja:", id);
     return { success: true };
+  }
+
+  static async updateDirector(churchId, directorId) {
+    // Simulação - substitua pela sua implementação real
+    console.log("Atualizando diretor da igreja:", churchId, "para:", directorId);
+    return { success: true };
+  }
+
+  static async removeDirector(churchId) {
+    // Simulação - substitua pela sua implementação real
+    console.log("Removendo diretor da igreja:", churchId);
+    return { success: true };
+  }
+
+  static async getChurchesByCity(city) {
+    // Simulação - substitua pela sua implementação real
+    const churches = await this.list();
+    return churches.filter(church => church.city === city);
+  }
+
+  static async getChurchesByState(state) {
+    // Simulação - substitua pela sua implementação real
+    const churches = await this.list();
+    return churches.filter(church => church.state === state);
   }
 }
