@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Layout from "../Layout";
+import Layout from "../Layout.jsx";
 
 // Páginas - Comum
-import SelecaoPerfil from "../Pages/SelecaoPerfil";
+import SelecaoPerfil from "../Pages/SelecaoPerfil.jsx";
 
 // Páginas - Músico
 import DashboardMusico from "../Pages/DashboardMusico";
